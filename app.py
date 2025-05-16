@@ -8,7 +8,7 @@ app = Flask(__name__)
 # Load model and data
 model = joblib.load('no_show_model.pkl')
 df = pd.read_csv('appointments.csv')
-features = ['Age', 'SMS_Received', 'Weekday', 'Previous_NoShows', 'Diabetes', 'Hypertension', 'Medical Insurance']
+features = ['Age', 'SMS_Received', 'Weekday', 'Previous_NoShows', 'Diabetes', 'Hypertension', 'Medical_Insurance']
 
 @app.route('/static/<path:path>')
 def send_static(path):
@@ -34,7 +34,7 @@ def predict():
         'Previous_NoShows': int(request.form['previous_noshows']),
         'Diabetes': int(request.form.get('diabetes', 0)),
         'Hypertension': int(request.form.get('hypertension', 0)),
-        'Scholarship': int(request.form.get('medical insurance', 0))
+        'Medical_Insurance': int(request.form.get('medical_insurance', 0))
     }
     
     prediction = model.predict(pd.DataFrame([input_data]))[0]
