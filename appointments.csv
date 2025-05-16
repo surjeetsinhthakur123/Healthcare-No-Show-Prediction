@@ -1,4 +1,4 @@
-Age,SMS_Received,Weekday,Previous_NoShows,Diabetes,Hypertension,Scholarship,NoShow
+Age,SMS_Received,Weekday,Previous_NoShows,Diabetes,Hypertension,Medical_Insurance,NoShow
 56,0,3,2,1,1,0,0
 69,1,7,2,0,0,0,0
 46,0,4,3,0,1,1,1
