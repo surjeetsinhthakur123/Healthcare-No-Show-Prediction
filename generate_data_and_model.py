@@ -14,7 +14,7 @@ data = {
     'Previous_NoShows': np.random.randint(0, 5, size=1000),
     'Diabetes': np.random.choice([0, 1], size=1000, p=[0.7, 0.3]),
     'Hypertension': np.random.choice([0, 1], size=1000, p=[0.6, 0.4]),
-    'Medical Insurance': np.random.choice([0, 1], size=1000, p=[0.8, 0.2]),
+    'Medical_Insurance': np.random.choice([0, 1], size=1000, p=[0.8, 0.2]),
     'NoShow': np.random.choice([0, 1], size=1000, p=[0.75, 0.25])
 }
 
@@ -22,7 +22,7 @@ df = pd.DataFrame(data)
 df.to_csv('appointments.csv', index=False)
 
 # Train model
-X = df[['Age', 'SMS_Received', 'Weekday', 'Previous_NoShows', 'Diabetes', 'Hypertension', 'Medical Insurance']]
+X = df[['Age', 'SMS_Received', 'Weekday', 'Previous_NoShows', 'Diabetes', 'Hypertension', 'Medical_Insurance']]
 y = df['NoShow']
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
