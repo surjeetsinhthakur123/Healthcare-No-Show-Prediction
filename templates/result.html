@@ -37,7 +37,7 @@
        {% set _ = conditions.append('Hypertension') %}
        {% endif %}
        {% if result.input_data.Medical_Insurance == 1 %}
-       {% set _ = conditions.append('Medical_Insurance') %}
+       {% set _ = conditions.append('Medical Insurance') %}
        {% endif %}
        {{ conditions|join(', ') if conditions else 'None' }}
       </p>
