@@ -37,7 +37,7 @@
        {% set _ = conditions.append('Hypertension') %}
        {% endif %}
        {% if result.input_data.Medical Insurance == 1 %}
-       {% set _ = conditions.append('Medical Insurance') %}
+       {% set _ = conditions.append('Medical_Insurance') %}
        {% endif %}
        {{ conditions|join(', ') if conditions else 'None' }}
       </p>
@@ -62,7 +62,7 @@
             {% if result.input_data.Hypertension == 1 %}
             <li>Emphasize importance of blood pressure monitoring</li>
             {% endif %}
-            {% if result.input_data.Medical Insurance == 1 %}
+            {% if result.input_data.Medical_Insurance == 1 %}
             <li>Provide information about medical insurance-covered services</li>
             {% endif %}
           </ul>
@@ -79,7 +79,7 @@
             {% if result.input_data.Hypertension == 1 %}
             <li>Include hypertension management tips</li>
             {% endif %}
-            {% if result.input_data.Medical Insurance == 1 %}
+            {% if result.input_data.Medical_Insurance == 1 %}
             <li>Remind about medical insurance benefits</li>
             {% endif %}
           </ul>
